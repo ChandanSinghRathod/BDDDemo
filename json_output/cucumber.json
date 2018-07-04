@@ -3,16 +3,16 @@
     "line": 1,
     "elements": [
       {
-        "line": 2,
-        "name": "Free Crm Login Test_Scenario",
+        "line": 14,
+        "name": "Free Crm Create a new contact scenario",
         "description": "",
-        "id": "free-crm-login-feature;free-crm-login-test-scenario",
+        "id": "free-crm-create-contacts;free-crm-create-a-new-contact-scenario;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 7511470906,
+              "duration": 20748151612,
               "status": "passed"
             },
             "line": 3,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 18032894,
+              "duration": 11795854,
               "status": "passed"
             },
             "line": 4,
@@ -36,19 +36,33 @@
           },
           {
             "result": {
-              "duration": 308802839,
+              "duration": 262666728,
               "status": "passed"
             },
             "line": 5,
-            "name": "Use enters username and User enters password",
+            "name": "Use enters \"chand1\" and  \"Tester@123\"",
             "match": {
-              "location": "LoginStepDefination.use_enters_username_and_User_enters_password()"
+              "arguments": [
+                {
+                  "val": "chand1",
+                  "offset": 12
+                },
+                {
+                  "val": "Tester@123",
+                  "offset": 26
+                }
+              ],
+              "location": "LoginStepDefination.use_enters_username_and_User_enters_password(String,String)"
             },
+            "matchedColumns": [
+              0,
+              1
+            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 12930879792,
+              "duration": 39298200857,
               "status": "passed"
             },
             "line": 6,
@@ -60,7 +74,7 @@
           },
           {
             "result": {
-              "duration": 11973621,
+              "duration": 12568505,
               "status": "passed"
             },
             "line": 7,
@@ -72,10 +86,192 @@
           },
           {
             "result": {
-              "duration": 92445061,
+              "duration": 2608975556,
               "status": "passed"
             },
             "line": 8,
+            "name": "user move to new contact page",
+            "match": {
+              "location": "LoginStepDefination.user_move_to_new_contact_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2570806123,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters again \"chandan\" and \"singh\" and \"QA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "chandan",
+                  "offset": 19
+                },
+                {
+                  "val": "singh",
+                  "offset": 33
+                },
+                {
+                  "val": "QA",
+                  "offset": 45
+                }
+              ],
+              "location": "LoginStepDefination.user_enters_contacts_details(String,String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 92364594,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "close the browser",
+            "match": {
+              "location": "LoginStepDefination.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Free Crm Create a new contact scenario",
+        "description": "",
+        "id": "free-crm-create-contacts;free-crm-create-a-new-contact-scenario;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6166817406,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "User is already on login page",
+            "match": {
+              "location": "LoginStepDefination.user_already_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11411171,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "title of login page is Free CRM",
+            "match": {
+              "location": "LoginStepDefination.titile_of_login_page_freecrm()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 306325595,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Use enters \"chand1\" and  \"Tester@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "chand1",
+                  "offset": 12
+                },
+                {
+                  "val": "Tester@123",
+                  "offset": 26
+                }
+              ],
+              "location": "LoginStepDefination.use_enters_username_and_User_enters_password(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9743492307,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User clicks on login button",
+            "match": {
+              "location": "LoginStepDefination.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6127012,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is on home page",
+            "match": {
+              "location": "LoginStepDefination.user_is_on_home_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1901409451,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user move to new contact page",
+            "match": {
+              "location": "LoginStepDefination.user_move_to_new_contact_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2006117570,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters again \"David\" and \"kambli\" and \"fighter\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "David",
+                  "offset": 19
+                },
+                {
+                  "val": "kambli",
+                  "offset": 31
+                },
+                {
+                  "val": "fighter",
+                  "offset": 44
+                }
+              ],
+              "location": "LoginStepDefination.user_enters_contacts_details(String,String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 86546724,
+              "status": "passed"
+            },
+            "line": 10,
             "name": "close the browser",
             "match": {
               "location": "LoginStepDefination.close_the_browser()"
@@ -85,10 +281,10 @@
         ]
       }
     ],
-    "name": "Free CRM Login Feature",
+    "name": "Free CRM create Contacts",
     "description": "",
-    "id": "free-crm-login-feature",
+    "id": "free-crm-create-contacts",
     "keyword": "Feature",
-    "uri": "C:/Users/Ckumarsi/workspace/PDC/CRMBDDFrameworkJG/src/main/java/Features/login.feature"
+    "uri": "C:/Users/Ckumarsi/workspace/PDC/CRMBDDFrameworkJG/src/main/java/Features/contacts.feature"
   }
 ]

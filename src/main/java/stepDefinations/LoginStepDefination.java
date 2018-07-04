@@ -3,6 +3,8 @@ package stepDefinations;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -22,6 +24,7 @@ public class LoginStepDefination {
 		driver= new ChromeDriver();
 		driver.get("https://www.freecrm.com/");
 	}
+	@SuppressWarnings("deprecation")
 	@When("^title of login page is Free CRM$")
 	
 	public void titile_of_login_page_freecrm(){
@@ -31,10 +34,10 @@ public class LoginStepDefination {
 		System.out.println(titile);
 		Assert.assertEquals("Free CRM software in the cloud powers sales and customer service", titile);
 	}
-	@Then("^Use enters username and User enters password$")
-	public void use_enters_username_and_User_enters_password()  {
-	    driver.findElement(By.name("username")).sendKeys("chand1");
-	    driver.findElement(By.name("password")).sendKeys("Tester@123");
+	@Then("^Use enters \"([^\"]*)\" and  \"([^\"]*)\"$")
+	public void use_enters_username_and_User_enters_password(String username, String password)  {
+	    driver.findElement(By.name("username")).sendKeys(username);
+	    driver.findElement(By.name("password")).sendKeys(password);
 //	    driver.findElement(By.)
 	    
 	}
@@ -49,6 +52,24 @@ public class LoginStepDefination {
 	   String titile= driver.getTitle();
 	   System.out.println(titile);
 	   Assert.assertEquals("CRMPRO", titile);
+	}
+	
+	@Then("^user move to new contact page$")
+	public void user_move_to_new_contact_page()  {
+driver.switchTo().frame("mainpanel");
+Actions action=new Actions(driver);
+action.moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Contacts')]"))).build().perform();
+driver.findElement(By.xpath("//a[contains(text(),'New Contact')]")).click();
+	}
+	
+	@Then("^user enters again \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void user_enters_contacts_details( String firstname, String lastname,String position)  {
+		driver.findElement(By.id("first_name")).sendKeys(firstname);
+		driver.findElement(By.id("surname")).sendKeys(lastname);
+		driver.findElement(By.id("company_position")).sendKeys(position);
+		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		
+	    
 	}
 	@Then("^close the browser$")
 	public void close_the_browser()  {
